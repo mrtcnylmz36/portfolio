@@ -8,23 +8,23 @@ export async function POST(request) {
 
     console.log(mail, message);
 
-    const transporter = nodemailer.createTransport({
-      host: "smtp.gmail.com",
-      port: 587,
-      secure: false, // `true` for port 465, `false` for all other ports
-      auth: {
-        user: "muratcanyilmaz9936@gmail.com",
-        pass: process.env.NODEMAILER,
-      },
-    });
+    // const transporter = nodemailer.createTransport({
+    //   host: "smtp.gmail.com",
+    //   port: 587,
+    //   secure: false, // `true` for port 465, `false` for all other ports
+    //   auth: {
+    //     user: "muratcanyilmaz9936@gmail.com",
+    //     pass: process.env.NODEMAILER,
+    //   },
+    // });
 
-    await transporter.sendMail({
-      from: "muratcanyilmaz9936@gmail.com", // sender address
-      to: mail, // list of receivers
-      subject: "Hello ✔", // Subject line
-      text: message, // plain text body
-      html: "<b>Hello world?</b>", // html body
-    });
+    // await transporter.sendMail({
+    //   from: "muratcanyilmaz9936@gmail.com", // sender address
+    //   to: mail, // list of receivers
+    //   subject: "Hello ✔", // Subject line
+    //   text: message, // plain text body
+    //   html: "<b>Hello world?</b>", // html body
+    // });
 
     return NextResponse.json({ message: "successed" }, { status: 200 });
   } catch (error) {
