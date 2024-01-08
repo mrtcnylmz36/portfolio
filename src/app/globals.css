@@ -1,0 +1,39 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* #home::before {
+  clear: both;
+  content: "";
+  display: table;
+  margin-top: -1px;
+  height: 0;
+} */
+
+/* .page {
+  display: grid;
+  grid-template-columns: 1fr min(1440px, 94%) 1fr;
+  grid-template-rows: 96px auto 72px;
+}
+
+.page > * {
+  grid-column: 2;
+} */
+
+@keyframes myspin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+.animate-spin-slow {
+  animation: myspin 5s linear infinite;
+}
+
+.ql-container {
+  font-size: 28px !important;
+  max-width: 1300px !important;
+}
+
+.quill > .ql-container .ql-editor.ql-blank::before {
+  color: gray;
+}
